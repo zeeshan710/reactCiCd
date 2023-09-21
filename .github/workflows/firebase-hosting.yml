@@ -48,7 +48,7 @@ jobs:
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         run: |
-          firebase use default --token "$FIREBASE_TOKEN"
+          firebase use ci-cd-pipeline --token "$FIREBASE_TOKEN"
           firebase deploy --only hosting
 
       - name: Deploy to Dev Firebase
@@ -56,5 +56,5 @@ jobs:
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN_DEV }}
         run: |
-          firebase use develop --token "$FIREBASE_TOKEN"
+          firebase use ci-cd-pipeline-dev --token "$FIREBASE_TOKEN"
           firebase deploy --only hosting
