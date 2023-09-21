@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "ci-cd-pipeline-c8426"
+    "default": "ci-cd-pipeline-c8426",
+    "develop": "ci-cd-pipeline-dev"
   }
 }
